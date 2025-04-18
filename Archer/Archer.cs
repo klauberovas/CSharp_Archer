@@ -14,7 +14,14 @@ namespace Archer
         public Archer(string name, int arrowCount)
         {
             Name = name;
-            ArrowCount = arrowCount;
+            if (arrowCount > 0)
+            {
+                ArrowCount = arrowCount;
+            }
+            else
+            {
+                throw new Exception("Please, insert number higher than zero.");
+            }
         }
         public void Shoot()
         {

@@ -7,6 +7,18 @@ class Program
 {
     static void Main(string[] args)
     {
+        try
+        {
+            StartSimulation();
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+    }
+
+    private static void StartSimulation()
+    {
         Archer robin = new Archer("Robin", 10);
 
         while (true)
@@ -38,8 +50,8 @@ class Program
                     continue;
             }
         }
-
     }
+
     public static int LoadIntegerFromConsole(string alert)
     {
         while (true)
