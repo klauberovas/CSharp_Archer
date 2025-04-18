@@ -23,12 +23,12 @@ class Program
 
         while (true)
         {
-            Console.WriteLine("--- Menu Lučistníka ---");
+            Console.WriteLine("\n--- Archer Menu ---");
             robin.DisplayStatus();
-            Console.WriteLine("1 - Vystřelit šíp");
-            Console.WriteLine("2 - Přidat šípy");
-            Console.WriteLine("3 - Konec");
-            Console.WriteLine("Zadejte svou volbu (1-3)");
+            Console.WriteLine("1 - Shoot");
+            Console.WriteLine("2 - Add arrows");
+            Console.WriteLine("3 - Quit");
+            Console.WriteLine("Please enter a number (1-3)");
 
             string input = Console.ReadLine();
 
@@ -39,14 +39,14 @@ class Program
                     break;
 
                 case "2":
-                    robin.AddArrows(LoadIntegerFromConsole("Zadej počet šípů:"));
+                    robin.AddArrows(LoadIntegerFromConsole("Enter the number of arrows:"));
                     break;
 
                 case "3":
                     return;
 
                 default:
-                    Console.WriteLine("Neplatný vstup. Zkus to prosím znovu.");
+                    Console.WriteLine("Invalid input. Please try again.");
                     continue;
             }
         }

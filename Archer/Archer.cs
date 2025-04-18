@@ -17,10 +17,11 @@ namespace Archer
             if (arrowCount > 0)
             {
                 ArrowCount = arrowCount;
+                Console.WriteLine($"{Name} is ready with {ArrowCount} {(ArrowCount == 1 ? "arrow" : "arrows")}!");
             }
             else
             {
-                throw new Exception("Please, insert number higher than zero.");
+                throw new Exception("Please insert number higher than zero.");
             }
         }
         public void Shoot()
@@ -28,11 +29,11 @@ namespace Archer
             if (ArrowCount > 0)
             {
                 ArrowCount -= 1;
-                Console.WriteLine($"Úspěšný výstřel. Zbývá ti {ArrowCount} šípů.");
+                Console.WriteLine($"{Name} fired! Arrows left: {ArrowCount}.");
             }
             else
             {
-                Console.WriteLine("Už nemáš šípy.");
+                Console.WriteLine($"{Name} has no arrows.");
             }
         }
         public void AddArrows(int number)
@@ -40,16 +41,16 @@ namespace Archer
             if (number > 0)
             {
                 ArrowCount += number;
-                Console.WriteLine($"Úspěšně přidáno {number} šípů.");
+                Console.WriteLine($"{Name} added {number} {(number == 1 ? "arrow" : "arrows")}. Total arrows: {ArrowCount}.");
             }
             else
             {
-                Console.WriteLine("Počet šípů k přidání musí být kladný.");
+                Console.WriteLine("The number of arrows must be greater than zero.");
             }
         }
         public void DisplayStatus()
         {
-            Console.WriteLine($"Jméno lučištníka: {Name}, počet šípů: {ArrowCount}.");
+            Console.WriteLine($"Archer: {Name} | Arrows: {ArrowCount}.");
         }
     }
 }
