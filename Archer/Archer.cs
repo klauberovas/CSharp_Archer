@@ -9,8 +9,8 @@ namespace Archer
 {
     public class Archer
     {
-        public string Name { get; set; }
-        public int ArrowCount { get; set; }
+        public string Name { get; private set; }
+        public int ArrowCount { get; private set; }
         public Archer(string name, int arrowCount)
         {
             Name = name;
@@ -21,7 +21,7 @@ namespace Archer
             if (ArrowCount > 0)
             {
                 ArrowCount -= 1;
-                Console.WriteLine($"Úspěšný výstřel. Zbývá ti {ArrowCount} {(ArrowCount == 1 ? "šíp" : "šípů")}.");
+                Console.WriteLine($"Úspěšný výstřel. Zbývá ti {ArrowCount} šípů.");
             }
             else
             {
@@ -33,7 +33,7 @@ namespace Archer
             if (number > 0)
             {
                 ArrowCount += number;
-                Console.WriteLine($"Úspěšně přidáno {number} {(number == 1 ? "šíp" : "šípů")}.");
+                Console.WriteLine($"Úspěšně přidáno {number} šípů.");
             }
             else
             {
