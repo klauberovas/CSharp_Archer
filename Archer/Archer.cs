@@ -21,7 +21,7 @@ namespace Archer
             if (ArrowCount > 0)
             {
                 ArrowCount -= 1;
-                Console.WriteLine($"Úspěšný výstřel. Zbývá ti {ArrowCount} šípů.");
+                Console.WriteLine($"Úspěšný výstřel. Zbývá ti {ArrowCount} {(ArrowCount == 1 ? "šíp" : "šípů")}.");
             }
             else
             {
