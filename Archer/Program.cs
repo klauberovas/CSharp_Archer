@@ -1,7 +1,4 @@
-﻿using System.Runtime.Intrinsics.Arm;
-using System.Security.Cryptography.X509Certificates;
-
-namespace Archer;
+﻿namespace Archer;
 
 class Program
 {
@@ -39,7 +36,7 @@ class Program
                     break;
 
                 case "2":
-                    robin.AddArrows(LoadIntegerFromConsole("Enter the number of arrows:"));
+                    robin.AddArrows(LoadPositiveIntegerFromConsole("Enter the number of arrows:"));
                     break;
 
                 case "3":
@@ -47,12 +44,12 @@ class Program
 
                 default:
                     Console.WriteLine("Invalid input. Please try again.");
-                    continue;
+                    break;
             }
         }
     }
 
-    public static int LoadIntegerFromConsole(string alert)
+    public static int LoadPositiveIntegerFromConsole(string alert)
     {
         while (true)
         {
